@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
+</head>
+<body>
+<header></header>
+<div class="title">
+    <img src="img/title.png" alt="">
+</div>
+<div id="sheetTitle" class="sheet-title">
+    <p class="list-rank">排名</p>
+    <p class="list-name">船长</p>
+    <p class="list-number">船员数</p>
+</div>
+<div id="list-container">
+    <ul id="user-list">
+        <!--TODO 间隔行换色 class="even" -->
+        <!--TODO 前三名，不同的奖牌  gold.png / silver.png / cooper.png-->
+        <li class="odd" v-for="(info,index) in ranking">
+            <img src="img/gold.png" alt="" class="medal">
+            <p class="number">{{ index + 1 }}</p>
+            <img v-bind:src="info.head" alt="" class="headshot">
+            <p class="name">{{ info.captain }}</p>
+            <p class="member-number" v-text="info.teamNum"></p>
+        </li>
+    </ul>
+</div>
+</div>
+
+<script src="js/vendor/vue.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="js/vendor/jquery-3.1.1.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+{
+  "_items": [
+    {
+      "captain": "蒙奇·D·路飞",
+      "head": "img/head/lufei.jpg",
+      "teamNum": 9
+    },
+    {
+      "captain": "爱德华·纽哥特",
+      "head": "img/head/baihuzi.jpg",
+      "teamNum": 1600
+    },
+    {
+      "captain": "Marshall D. Teach",
+      "head": "img/head/heihuzi.jpg",
+      "teamNum": 9
+    },
+    {
+      "captain": "香克斯",
+      "head": "img/head/hongfa.jpg",
+      "teamNum": 1600
+    },
+    {
+      "captain": "赤犬",
+      "head": "img/head/haijun.jpg",
+      "teamNum": 1000000
+    },
+    {
+      "captain": "惡龍",
+      "head": "img/head/elong.jpg",
+      "teamNum": 100
+    }
+  ],
+  "_links": {
+    "self": {
+      "href": "leaderboard",
+      "title": "leaderboard"
+    },
+    "parent": {
+      "href": "/",
+      "title": "home"
+    }
+  },
+  "_meta": {
+    "max_results": 4,
+    "total": 1,
+    "page": 1
+  }
+}
