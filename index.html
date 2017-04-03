@@ -21,14 +21,12 @@
 </div>
 <div id="list-container">
     <ul id="user-list">
-        <!--TODO 间隔行换色 class="even" -->
-        <!--TODO 前三名，不同的奖牌  gold.png / silver.png / cooper.png-->
         <li v-bind:class="(index % 2 == 0) ? even : odd" v-for="(info,index) in ranking">
             <img v-bind:src="medals(index)" v-show="index < 3 ? true : false" alt="" class="medal">
             <p class="number">{{ index + 1 }}</p>
             <img v-bind:src="info.head" alt="" class="headshot">
-            <p class="name">{{ info.captain }}</p>
-            <p class="member-number" v-text="info.teamNum"></p>
+            <p class="name" v-text="info.captain"></p>
+            <p class="member-number">{{ info.teamNum | numFormat }}</p>
         </li>
     </ul>
 </div>

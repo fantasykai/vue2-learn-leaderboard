@@ -12,6 +12,18 @@ var vm = new Vue({
             console.log("ranking:" + res.data._items)
         });
     },
+    filters: {
+        numFormat: function (num) {
+            if (num < 1000) {
+                return num
+            } else if (num > 1000 && num < 10000) {
+                return num / 1000 + 'k';
+            } else if (num > 10000) {
+                return num / 10000 + 'w';
+            }
+        }
+
+    },
     methods: {
         medals: function (index) {
             if (index === 0) {
