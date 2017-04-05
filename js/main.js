@@ -12,6 +12,7 @@ var vm = new Vue({
             console.log("ranking:" + res.data._items)
         });
     },
+    // 过滤器练习，格式化数字
     filters: {
         numFormat: function (num) {
             if (num < 1000) {
@@ -24,6 +25,7 @@ var vm = new Vue({
         }
 
     },
+    // 方法练习：前三名显示不同的奖牌图标
     methods: {
         medals: function (index) {
             if (index === 0) {

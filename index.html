@@ -21,11 +21,19 @@
 </div>
 <div id="list-container">
     <ul id="user-list">
+        <!--v-bind 绑定元素的属性 支持对象语法，表达式，数组语法-->
+        <!--v-for 指令根据一组数组的选项列表进行渲染。 v-for 指令需要以 item in items 形式的特殊语法， items 是源数据数组并且 item 是数组元素迭代的别名。-->
+        <!--在 v-for 块中，我们拥有对父作用域属性的完全访问权限。 v-for 还支持一个可选的第二个参数为当前项的索引。-->
         <li v-bind:class="(index % 2 == 0) ? even : odd" v-for="(info,index) in ranking">
+            <!--只有前3名展示奖牌图片，并且展示金，银，铜 三种不同的图片-->
             <img v-bind:src="medals(index)" v-show="index < 3 ? true : false" alt="" class="medal">
+            <!-- 名次 -->
             <p class="number">{{ index + 1 }}</p>
+            <!-- 绑定头像-->
             <img v-bind:src="info.head" alt="" class="headshot">
+            <!-- 2种纯文本数据绑定方法 {{}} | v-text 船长名称-->
             <p class="name" v-text="info.captain"></p>
+            <!-- 过滤器练习：格式化人数 -->
             <p class="member-number">{{ info.teamNum | numFormat }}</p>
         </li>
     </ul>
