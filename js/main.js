@@ -23,7 +23,6 @@ var vm = new Vue({
                 return num / 10000 + 'w';
             }
         }
-
     },
     // 方法练习：前三名显示不同的奖牌图标
     methods: {
