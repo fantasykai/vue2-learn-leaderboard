@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
+</head>
+<body>
+<header></header>
+<div id="hello">
+    <input type="text" v-model="name">
+    <p></p>
+    <div>
+        Hi, <strong>{{ name }}</strong>
+    </div>
+    <p> </p>
+    <button  v-on:click="initName"> 点我初始化 </button>
+</div>
+
+<script src="js/vendor/vue.min.js"></script>
+<script src="js/hello.js"></script>
+</body>
+</html>
